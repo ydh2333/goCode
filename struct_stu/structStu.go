@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main2() {
 
 	type Student struct {
 		Name  string
@@ -31,6 +31,10 @@ func main() {
 		18,
 		99.5,
 	}
+
+	fmt.Println("name:", stu2.string, "Age:", stu2.int, "Score:", stu2.float64)
+
+	stu2.int = 22
 
 	fmt.Println("name:", stu2.string, "Age:", stu2.int, "Score:", stu2.float64)
 
