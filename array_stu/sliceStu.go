@@ -29,7 +29,7 @@ func main() {
 	dst1 := make([]int, 4, 5)
 
 	src2 := []int{1, 2, 3, 4, 5}
-	dst2 := make([]int, 3, 3)
+	dst2 := make([]int, 3)
 
 	fmt.Println("before copy, src1 = ", src1)
 	fmt.Println("before copy, dst1 = ", dst1)
