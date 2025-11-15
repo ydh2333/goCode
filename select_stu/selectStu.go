@@ -61,7 +61,8 @@ func main() {
 	}
 	<-ch1
 	<-ch2
-	ctx, _ := context.WithTimeout(context.Background(), 2*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel() // 通常需要调用cancel释放资源，否则可能会有资源泄露警告
 
 	go func() {
 		for {
