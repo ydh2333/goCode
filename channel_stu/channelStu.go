@@ -32,25 +32,25 @@ func main() {
 	go sendOnly(ch)
 
 	// 启动接收goroutine
-	//go receiveOnly(ch)
+	go receiveOnly(ch)
 
 	// 使用select进行多路复用
-	timeout := time.After(2 * time.Second)
-	for {
-		select {
-		case v, ok := <-ch:
-			if !ok {
-				fmt.Println("Channel已关闭")
-				return
-			}
-			//time.Sleep(50000 * time.Millisecond)
-			fmt.Printf("主goroutine接收到: %d\n", v)
-		case <-timeout:
-			fmt.Println("操作超时")
-			return
-		default:
-			fmt.Println("没有数据，等待中...")
-			time.Sleep(500 * time.Millisecond)
-		}
-	}
+	// timeout := time.After(2 * time.Second)
+	// for {
+	// 	select {
+	// 	case v, ok := <-ch:
+	// 		if !ok {
+	// 			fmt.Println("Channel已关闭")
+	// 			return
+	// 		}
+	// 		//time.Sleep(50000 * time.Millisecond)
+	// 		fmt.Printf("主goroutine接收到: %d\n", v)
+	// 	case <-timeout:
+	// 		fmt.Println("操作超时")
+	// 		return
+	// 	default:
+	// 		fmt.Println("没有数据，等待中...")
+	// 		time.Sleep(500 * time.Millisecond)
+	// 	}
+	// }
 }

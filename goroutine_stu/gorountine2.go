@@ -45,7 +45,7 @@ func (c *UnsafeCounter) GetCount() int {
 func main() {
     counter := SafeCounter{}
 
-    // 启动100个goroutine同时增加计数
+    // 启动1000个goroutine同时增加计数
     for range 1000 {
         go func() {
             for range 100 {
