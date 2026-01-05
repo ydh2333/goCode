@@ -18,17 +18,17 @@ type C1 struct {
 	c string
 }
 
-func main3() {
+func main() {
 	var c = C1{
 		a: "c.a",
 		b: "c.b",
 		c: "c.c",
-		
+
 		B1: B1{
 			a: "B.a",
 			b: "B.b",
 			A1: A1{
-				a:"B.A.a",
+				a: "B.A.a",
 			},
 		},
 		A1: A1{
@@ -36,5 +36,5 @@ func main3() {
 		},
 	}
 
-	fmt.Println("c.a:", c.a,"\nc.B.a:", c.B1.a, "\nc.B.A.a:", c.B1.A1.a, "\nc.A.a:", c.A1.a)
+	fmt.Println("c.a:", c.a, "\nc.B.a:", c.B1.a, "\nc.B.A.a:", c.B1.A1.a, "\nc.A.a:", c.A1.a)
 }

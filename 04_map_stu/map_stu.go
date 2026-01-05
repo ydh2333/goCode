@@ -6,13 +6,15 @@ func main() {
 	var m1 map[string]int
 	fmt.Println("m1 =", m1)
 
+	fmt.Println("---------------------------------------")
+
 	var m2 map[string]string = map[string]string{
 		"one":   "hello",
 		"two":   "world",
 		"three": "golang",
 	}
 	m2["four"] = "java"
-	fmt.Println("m2 =", m2, "m2[\"one\"]", m2["one"])
+	fmt.Println("m2 =", m2, "\nm2[\"one\"]", m2["one"])
 
 	fmt.Println("---------------------------------------")
 

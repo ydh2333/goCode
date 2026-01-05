@@ -14,7 +14,7 @@ var carr [5]*Custom = [5]*Custom{
 	{5},
 }
 
-func main3() {
+func main() {
 	a := [5]int{50, 40, 30, 20, 10}
 	fmt.Println("before all, a = ", a)
 	for i := range carr {

@@ -41,15 +41,15 @@ func main() {
 
 	fmt.Println("-------------------------------")
 
-	// switch g {
-	// case Male:
-	// 	fmt.Println("结果是：", g)
-	// case Female:
-	// 	fmt.Println("结果是：", g)
-	// default:
-	// 	fmt.Println("未知")
-	// }
-	fmt.Println("结果是：", g.ABC())
+	switch g {
+	case Male:
+		fmt.Println("switch结果是：", g)
+	case Female:
+		fmt.Println("switch结果是：", g)
+	default:
+		fmt.Println("switch未知")
+	}
+	fmt.Println("g.abc结果是：", g.ABC())
 
 	fmt.Println("-------------------------------")
 
@@ -59,11 +59,9 @@ func main() {
 	switch t := d.(type) {
 	case byte:
 		fmt.Println("d is byte type, ", t)
-	case *byte:
-		fmt.Println("d is byte point type, ", t)
-	case *int:
+	case int:
 		fmt.Println("d is int type, ", t)
-	case *string:
+	case string:
 		fmt.Println("d is string type, ", t)
 	default:
 		fmt.Println("d is unknown type, ", t)

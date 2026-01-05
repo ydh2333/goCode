@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main1() {
 	s1 := []int{10, 20, 30, 40, 50}
 	fmt.Println("len:", len(s1), "cap:", cap(s1))
 	fmt.Printf("s1原来地址：%p\n", &s1)

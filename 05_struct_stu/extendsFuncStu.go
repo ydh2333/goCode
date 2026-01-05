@@ -19,7 +19,6 @@ func (a A) SetA(s string) {
 
 func (a *A) SetPA(s string) {
 	a.a = s
-
 	fmt.Printf("a2的内存地址：%p\n", a)
 
 }
@@ -47,7 +46,7 @@ func (b *B) modifyD() {
 	b.d = 200
 }
 
-func NewB() B{
+func NewB() B {
 	return B{
 		b: "String Bb",
 		c: []int{1, 2, 3},
@@ -58,15 +57,14 @@ func NewB() B{
 	}
 }
 
-
-func main() {
+func main1() {
 	var a A
 	a.SetA("set a!")
 
 	fmt.Printf("a的内存地址：%p\n", &a)
 
 	resa := a.GetA()
-	fmt.Println(resa)
+	fmt.Println("a.GetA():", resa)
 
 	fmt.Println("--------------------")
 
@@ -91,6 +89,5 @@ func main() {
 	b.modifyB()
 
 	fmt.Println(b)
-
 
 }
