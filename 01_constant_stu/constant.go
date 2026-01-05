@@ -70,7 +70,7 @@ func main() {
 	}
 
 	fmt.Println("-------------------------------")
-	
+
 	var b int = 4
 	fmt.Println("local variable, b = ", b)
 	if b := 3; b == 3 {
